@@ -72,7 +72,7 @@
 
         $(function () {
             $('form').submit(function () {
-                const expense    = $('select[name="expense"]').val();
+                const expense    = $('select[name="expense"] option:selected').text();
                 const amount = $('input[name="amount"]').val();
                 const date  = $('input[name="date"]').val();
                 const detail  = $('input[name="detail"]').val();
