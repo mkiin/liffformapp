@@ -58,8 +58,9 @@
 
         function sendText(text) {
             liff.sendMessages([{
-                'type': 'text',
-                'text': text
+                'type': 'postback',
+                'displayText': text,
+                'data': 'action=write'
             }]).then(function () {
                 liff.closeWindow();
             }).catch(function (error) {
@@ -83,6 +84,5 @@
         });
 
     </script>
-
 </body>
 </html>
