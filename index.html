@@ -72,11 +72,12 @@
 
         $(function () {
             $('form').submit(function () {
+                const isLiffMsg = "liff"
                 const expense    = $('select[name="expense"] option:selected').text();
                 const amount = $('input[name="amount"]').val();
                 const date  = $('input[name="date"]').val();
                 const detail  = $('input[name="detail"]').val();
-                const msg = `${expense}\n${amount}\n${date}\n${detail}`;
+                const msg = `${expense}\n${amount}\n${date}\n${detail}\n${isLiffMsg}`;
                 sendText(msg);
                 return false;
             });
